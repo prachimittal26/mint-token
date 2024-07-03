@@ -16,7 +16,14 @@ The ERC20 token contract (`MyToken.sol`) is deployed with the following details:
 ### 1. Minting Tokens
 The contract owner (deployer) can mint new tokens and allocate them to a specified address.
 
+## Transfer Function
 
+The `transfer` function allows any user to transfer their tokens to another address.
+
+### Function Definition
+
+```solidity
+function transfer(address recipient, uint256 amount) public override returns (bool)
 Function Signature:
 
 solidity
@@ -27,8 +34,7 @@ Any token holder can burn (destroy) a specific amount of their own tokens.
 
 Function Signature:
 
-solidity
-Copy code
+
 function burn(uint256 amount) public;
 Deployment
 The contract is deployed using Hardhat, ensuring proper testing and deployment practices. Deployment scripts and configuration are included in the project directory (scripts/deploy.js).
